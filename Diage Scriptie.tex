@@ -1,13 +1,15 @@
-\documentclass[11pt,a4paper,onecolumn,draft,titlepage]{article}
+\documentclass[11pt,a4paper,onecolumn,titlepage]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{ulem}
+\usepackage[margin=45pt]{geometry}
 \author{Nico Andrew Glas}
 \title{Diage: A Dialogue Generator}
-
+\DeclareGraphicsExtensions{.png, .jpg}
+\graphicspath{ {./img/} }
 \newcommand{\code}[1]{\texttt{#1}} %layout of game titles
 \newcommand{\diage}{\textsl{Diage }}
 \makeatletter
@@ -18,25 +20,26 @@
 \begin{document}
 \maketitle
 \section*{Abstract}
-When we create games, much of our time goes in to story writing (where applicable), and while this is unavoidable in narrative heavy games, we can automate it for 'non-critical' dialogue. For example, in the Pokémon RPGs the player can speak to every NPC in the game. All of these monologues were written by a story writer, even the singular sentences that hold no value to plot. We believe that with the right tooling we can automate this process and save valuable development time. \cite{riedl04} \cite{riedl03}
+When we create games, much of our time goes in to story writing (where applicable), and while this is unavoidable in narrative heavy games, we can automate it for 'non-critical' dialogue. For example, in the Pokémon RPGs the player can speak to every NPC in the game. All of these monologues were written by a story writer, even the singular sentences that hold no value to plot. We believe that with the right tooling we can automate this process and save valuable development time. \cite{Cavazza:2002:CIS:630325.630747} \cite{Greimas:Boydstun:90} \cite{Magerko:2004:ACD:1597321.1597339} \cite{Porteous:2009:CNG:1695522.1695557} \cite{Weyhrauch:1997:GID:925491} \cite{Riedl03character-focusednarrative} \cite{Riedl:2003:MIU:860575.860694} \cite{Riedl:2004:IPM:1018409.1018753} \cite{Sgouros199929}
+
 \section*{Acknowledgements}
-\Huge TODO
+
 \newpage
-\normalsize
 \tableofcontents
 \newpage
 \section{Introduction}
-\Huge TODO
+
 \subsection{Create-IT}
-\Huge TODO
+
 \subsection{Problem definition}
-\Huge TODO
+
 \subsection{Related work}
-\Huge TODO
+
 \subsection{Proof of concept}
-\Huge TODO
+\newpage
+
 \section{Defining a story}
-\normalsize In our setting the "story" is a collection of coherent events that move forward in time with definitive starting and ending positions. For example; We define our story to begin with our hero Jack in his house and he wants to go to Jill's house for reasons. We can hereby define our story's initial state as:
+In our setting the "story" is a collection of coherent events that move forward in time with definitive starting and ending positions. For example; We define our story to begin with our hero Jack in his house and he wants to go to Jill's house for reasons. We can hereby define our story's initial state as:
 \begin{itemize}
 \item[] \textsf{S}: Jack \textsc{in} Jack's House
 \item[] \textsf{P}: Jack \textsc{in} Jill's House
@@ -47,7 +50,7 @@ In this case, the \textsf{P} is the last plot point in our story, thus it will b
 This section will cover the modelling language I use to visualize the flow of information, some static and some waiting for the interaction of the player to release this information and ensuring plot progression.
 
 \begin{figure}
-\includegraphics[scale=0.3]{img/symbols}
+\includegraphics[scale=0.3]{symbols}
 \caption{List of Declarative Symbols}
 \label{fig:symbols}
 \end{figure}
@@ -58,20 +61,17 @@ Objects are rather straight-forward. In the local store from previous examples w
 Actions define what actors can do with something or some one and accessors declare what actors know about a given subject. The latter is commonly used in conjunction with plots, signifying an increase in knowledge the moment that said plot is resolved. When incorporated in a full diagram we get something like figure~\ref{fig:diagram1}. An other form of notation used is shown in figure~\ref{fig:swimlane}. This is less verbose and therefore has less detail, but gives more oversight. These diagrams are called swimlanes~\footnote{Aw, hell no. Swimlanes? Come on, you can do better} and should remain static and does not contain any dynamic information. These could be seen as the \textit{status quo} for a given space. More research is needed to make a definitive conclusion on a sensible and readable notation.
 \begin{figure}
 \label{fig:diagram1}
-\includegraphics[scale=0.3]{img/diagram_example_1}
+\includegraphics[scale=0.3]{diagram_example_1}
 \caption{A \diage Diagram}
 \end{figure}
 \begin{figure}
 \label{fig:swimlane}
-\includegraphics[scale=0.5]{img/swimlanes}
+\includegraphics[scale=0.5]{swimlanes}
 \caption{\diage swim lane diagram}
 \end{figure}
 \section{Usage in Ludoscope}
-\Huge TODO
 \section{Further study}
 \label{sec:further_study}
-\Huge TODO
-\normalsize	
 \bibliographystyle{plain}
 \bibliography{diage}
 \end{document}
