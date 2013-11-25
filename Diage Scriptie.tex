@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper,onecolumn,titlepage]{book}
+\documentclass[12pt,a4paper,onecolumn,titlepage]{book}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -9,12 +9,18 @@
 \usepackage[margin=45pt]{geometry}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage[hidelinks]{hyperref}
 \author{Nico Andrew Glas}
 \title{Diage: A Dialogue Generator}
 \DeclareGraphicsExtensions{.png, .jpg}
 \graphicspath{ {./img/} }
 \newcommand{\code}[1]{\texttt{#1}}
-\newcommand{\diage}{\textsl{Diage }}
+\newcommand{\diage}{\textsl{Diage} }
+\newcommand{\game}[1]{\textit{#1}}
+\newcommand{\gameby}[2]{\game{#1} by {\textbf{#2}}}
+\newcommand{\citationneeded}{[\textit{citation needed}]}
+\newcommand{\rogue}{\textit{roguelike} }
+\newcommand{\his}{his/her }
 \makeatletter
 
 \makeatother
@@ -23,25 +29,18 @@
 \begin{document}
 \maketitle
 \chapter*{Abstract}
-When we create games, much of our time goes in to story writing (where applicable), and while this is unavoidable in narrative heavy games, we can automate it for 'non-critical' dialogue. For example, in the Pokémon RPGs the player can speak to every NPC in the game. All of these monologues were written by a story writer, even the singular sentences that hold no value to plot. We believe that with the right tooling we can automate this process and save valuable development time. \cite{Cavazza:2002:CIS:630325.630747} \cite{Greimas:Boydstun:90} \cite{Magerko:2004:ACD:1597321.1597339} \cite{Porteous:2009:CNG:1695522.1695557} \cite{Weyhrauch:1997:GID:925491} \cite{Riedl03character-focusednarrative} \cite{Riedl:2003:MIU:860575.860694} \cite{Riedl:2004:IPM:1018409.1018753} \cite{Sgouros199929}
+\textit{will come later}\cite{Cavazza:2002:CIS:630325.630747} \cite{Greimas:Boydstun:90} \cite{Magerko:2004:ACD:1597321.1597339} \cite{Porteous:2009:CNG:1695522.1695557} \cite{Weyhrauch:1997:GID:925491} \cite{Riedl03character-focusednarrative} \cite{Riedl:2003:MIU:860575.860694} \cite{Riedl:2004:IPM:1018409.1018753} \cite{Sgouros199929}
 
 \chapter*{Acknowledgements}
-
-\newpage
 \tableofcontents
-\newpage
-\chapter{Introduction}
-
-\section{Create-IT}
-
-\section{Problem definition}
-
-\section{Related work}
-
-\section{Proof of concept}
+\include{chapters/Introduction}
+\chapter{The interactive story}
+\textit{Here I want to talk about the field of interactive storytelling and narrative building. Gives us a nice entrance to the rest of the document}
 \include{chapters/DML}
-
+\include{chapters/NarrativePlanning}
 \chapter{Usage in Ludoscope}
+\label{sec:ludoscope}
+\textit{This chapter will discuss the usage of Ludoscope for the procedural generation of plots and the diage knowledge model for a hypothetical quest generator.}
 \chapter{Further study}
 \label{sec:further_study}
 \bibliographystyle{plain}
