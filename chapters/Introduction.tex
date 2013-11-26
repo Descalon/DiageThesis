@@ -1,7 +1,7 @@
 
 \chapter{Introduction}
 In the world of game development we strive to create the best experiences for a wide and diverse audience. During the course of development there are a number of obstacles that can (and often will) hinder the progress of said game. Some of these hindrances come from processes that are essential to a game like; level- and world building, or story- and quest design. They take a proportionally large amount of development time and take a very specific mindset to create. 
-A current development within the game development\footnote{twice development within the space of 3 words. NOT DONE} community to tackle these issues is the use of \textit{Procedural Content Generation} (PCG). This may be a confusing phrase for some, so let's dissect it. 
+A current development within the game development\footnote{twice development within the space of 3 words. NOT DONE} community to tackle these issues is the use of \textit{Procedural Content Generation} (PCG). This may be a confusing phrase for some, so let's dissect it.\footnote{Does this sound preachy?}
 \textbf{Content Generation}: When taken apart, this part of the phrase will probably become a lot clearer. It just really means what it says, we try to generate content, be that a quest for a Role-Playing game (like \game{World of Warcraft}) or a complete dungeon for a dungeon crawler (like \game{Rogue} or the \game{Diablo} series). This generation can take place either on run-time (also called \code{live} or \code{on-line} generation), making it possible for new generation for each time the game is run. Another possibility is to generate content prior to release. This has the benefit of being able to tweak the content to make it more satisfying or aesthetically pleasing, but removes the dynamic aspect that some games might strive for. Nobody will say that one of these methods is \emph{better} than the other, but they are both tools to be used on the right moment.
 \textbf{Procedural}: This part of the phrase is the one that often causes the most confusion, but just means that we use a specific procedure to generate our content. In the world of programming, it usually comes down to one or multiple algorithms that work together to generate \emph{predictable} content. A good example for a non-digital form of procedurally generated content is the card game \game{Klondike} (also called \game{Solitaire} or \game{Patience} in the US and the UK respectively). The procedure in this game is the shuffling of the deck. This "procedure" ensures a random order of the cards, and the resulting content is the layout of the game. While this might be a good example for content generation it is a poorly implemented one, for there exists multiple outcomes that the game can not be completed.
 
@@ -29,7 +29,10 @@ The previous years has seen a rise in popular \rogue games, \gameby{FTL: Faster 
 
 I specifically target \textit{roguelikes} for their inherent use of content generation. The need to have a different set of content throughout a play-session is the key selling point of a \rogue game. This makes it the right genre to experiment in with any new type of content generation.
 
-In my question I speak of benefits to the game by the use of a procedurally generated narrative. This results in a few sub-questions that tackle these benefits. \textit{What gameplay benefits can we introduce}, and \textit{How does the development process benefit from a procedurally generated narrative}. These questions are measurable to a certain degree that give us a good view on the beneficial factor of a generated narrative. 
+In my question I speak of benefits to the game by the use of a procedurally generated narrative. This results in a few sub-questions that tackle these benefits. \textit{What gameplay benefits can we introduce}, and \textit{How does the development process benefit from a procedurally generated narrative}. These questions are measurable to a certain degree that give us a good view on the beneficial factor of a generated narrative.
+
+\subsection{Requirements and Constraints}
+Is this really necessary? 
 
 \section{Research methods}
 In the previous section I have declared my research questions being
@@ -50,5 +53,14 @@ I want the generated narrative to be part of a game, not just a additive thereon
 \subsection{RQ \ref{rq:2a}}
 \textit{How does the development process benefit from a procedurally generated narrative?} This questions has some snags. What does it take to measure a process? Do we look at time spent writing a story and contrast that with the time spent building a story generator? What about the fact that we only have to build that generator once, whereas story crafting needs to be done for every single game.
 
-\subsection{Deliverables}
-As a deliverable I will create a small \rogue game that serves as a proof of concept. With a project duration of 20 weeks, any form of "finished" game is out of scope. The game should have the essentials to be recognised as a \rogue, but it's \textit{usp} is a form of generated narrative. The actual outcome is to be decided\footnote{\label{ln1}will be included in the final draft}. A possible deliverable will be a scientific paper with the intent of publication. However, this is speculative and tentative, for at the moment we do not know what results we will generate\footnotemark[5].
+\section{Proof of concept}
+As a proof of concept I propose to build a game that incorporates the findings of this research. The game I will make will be a \rogue for their inherent use of PCG techniques. Due to the limited duration and scope of this project, the game will be restrained to the most basic elements of a \rogue. The only addition being a dynamically generated narrative. This game should pose as the proof of my research and be demonstrable to verify my answers to my research questions.
+
+\section{Rough planning estimate}
+This project lasts for 20 weeks, and the following will indicate my initial planning.
+
+\begin{itemize}
+	\item \textbf{Week 1-6} Literary study
+	\item \textbf{Week 7-13} Creating a generative algorithm
+	\item \textbf{Week 14-20} Proof of concept. 
+\end{itemize}
