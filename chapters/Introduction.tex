@@ -1,61 +1,35 @@
 
 \chapter{Introduction}
-In the world of game development we strive to create the best experiences for a wide and diverse audience. During the course of development there are a number of obstacles that can (and often will) hinder the progress of said game. Some of these hindrances come from processes that are essential to a game like; level- and world building, or story- and quest design. They take a proportionally large amount of development time and take a very specific mindset to create. 
-A current development within the game development\footnote{twice development within the space of 3 words. NOT DONE} community to tackle these issues is the use of \textit{Procedural Content Generation} (PCG). This may be a confusing phrase for some, so let's dissect it.\footnote{Does this sound preachy?}
-\textbf{Content Generation}: When taken apart, this part of the phrase will probably become a lot clearer. It just really means what it says, we try to generate content, be that a quest for a Role-Playing game (like \game{World of Warcraft}) or a complete dungeon for a dungeon crawler (like \game{Rogue} or the \game{Diablo} series). This generation can take place either on run-time (also called \code{live} or \code{on-line} generation), making it possible for new generation for each time the game is run. Another possibility is to generate content prior to release. This has the benefit of being able to tweak the content to make it more satisfying or aesthetically pleasing, but removes the dynamic aspect that some games might strive for. Nobody will say that one of these methods is \emph{better} than the other, but they are both tools to be used on the right moment.
-\textbf{Procedural}: This part of the phrase is the one that often causes the most confusion, but just means that we use a specific procedure to generate our content. In the world of programming, it usually comes down to one or multiple algorithms that work together to generate \emph{predictable} content. A good example for a non-digital form of procedurally generated content is the card game \game{Klondike} (also called \game{Solitaire} or \game{Patience} in the US and the UK respectively). The procedure in this game is the shuffling of the deck. This "procedure" ensures a random order of the cards, and the resulting content is the layout of the game. While this might be a good example for content generation it is a poorly implemented one, for there exists multiple outcomes that the game can not be completed.
-
-In my thesis I strive to discover how a \rogue game can benefit from a procedurally generated narrative.
-
-\section{On "random" generation}
-In former years we always spoke of content that was generated \emph{randomly}. The use of this adjective has since been frowned upon, because random insinuates a lack of control and predictability. We now favour the term procedural, as this covers the use of predictable algorithms and a structure that is mathematically justified. Generally speaking the two phrases are interchangeable, but their sentiment can cause confusion. For the sake of coherency I will continue using the term \textit{procedural content generation}.
-\section{A word on narration}
-I want to go as far as to say that narration defines what being humans means. We, as a society and as a species, have always used a storytelling context to receive and deliver information. Be that a story on the dangers of bears and lions to a more modern setting for the sake of leisure. But even then, for the sake of argument we need a proper definition of a narrative. Riedl and Young stated that a narrative is in it's simplest form a temporally ordered sequence of events \citep{Riedl:2004:IPM:1018409.1018753}. This is the definition I will keep to throughout this document. One other thing of particular note; a narrative does not explicitly mean the usage of text or spoken word. This is an easy, and clear way to convey a story, but never the only ways to do so. Granted; it can certainly add to the experience, but in my own opinion a game should, first and foremost, try to convey a story through it's mechanics. To discard that rule is to introduce the expensively named \textit{ludo-narrative dissonance}, or a discord between narrative and gameplay. There has been a vast discussion on the Internet about this phenomenon, on which I will not elaborate, but is worth of note to any aspiring game developer/designer. Games can be a powerful medium in which to explore the human condition, but for that we can really come to that point we need to start treating it with that same respect. And that's my preachy part.. which probably needs to be cut\footnote{Which makes me sad}.
-\section{A word on static and dynamic generation}
-Throughout this document I reference to static and dynamic generation, or static and dynamic narratives. These terms refer to the point in time where the generation takes place. When we speak of a static generation, this happens during the development. A developer may choose to generate a game world and continue to populate that world with the rest of his content. In a dynamic setting, said world is generated at runtime, usually when a new game is started. This means that every time the player starts a new game he gets a new world to explore. In a narrative context that means that a static narrative has been generated, but will never change. Whereas a dynamic narrative will always try to be different from the former. 
 
 \section{Create-IT}
 Create-IT applied research is one of the research institutes hosted by the University of Applied Sciences of Amsterdam. In this lab students, teachers and researchers all preform applied studies in the different sections of the IT world. Their goal is to educate future professionals in the uses of applied research, so these professionals can anticipate the ever changing field that is Information Technology.
-In the newly created Game Research Lab students and researchers alike contribute to the ever growing community of game developers; making the development of games easier or trying to understand current problems within the industry\footnote{How much can a few lines suck?}.
+In the newly created Game Research Lab students and researchers alike contribute to the growing community of game developers; making the development of games easier or trying to understand current problems within the industry\footnote{How much can a few lines suck?}.
 
-\section{Problem definition}
-My main research question is \textit{How can a \rogue game benefit from a procedurally generated narrative?}. The other questions I want to answer are: "How does a computer recognise a good narrative", and "How do you structured a procedurally generated narrative". 
-In this section I will state my research questions, and try to dissect them so all readers of this document have the same definitions, and the same context.
+\section{Technology}
+This section covers the technologies used by me in developing and demonstrating the \diage system.
 
-\textit{How can a \rogue game benefit from a procedurally generated narrative?}
-
-Let me clarify the term \rogue. The genre started with the video game \game{Rogue} that was released in 1980, and was characterised by having "random" dungeons where the player has to navigate rooms and fight monsters. The ultimate goal of the game was to get to the highest level possible without dying once. The game never really "ended". The game was over when the player died, but after that the player got to start all over again on level 1 with a complete newly generated dungeon. As the game gets progressively harder when the player starts go get to other levels, the chances for the player to lose get higher. Now, back to the term "\rogue"; A game with no definitive end and \textit{perma-death}\footnote{Perma-death is a term used for the loss of progress that a player experiences when \his character dies}. 
-The previous years has seen a rise in popular \rogue games, \gameby{FTL: Faster Than Light}{Subset Games} (2012) and \gameby{The Binding of Isaac}{Edmund McMillen and Floris Himsl} (2011) being just some examples.
-
-I specifically target \textit{roguelikes} for their inherent use of content generation. The need to have a different set of content throughout a play-session is the key selling point of a \rogue game. This makes it the right genre to experiment in with any new type of content generation.
-
-In my question I speak of benefits to the game by the use of a procedurally generated narrative. This results in a few sub-questions that tackle these benefits. \textit{What gameplay benefits can we introduce}, and \textit{How does the development process benefit from a procedurally generated narrative}. These questions are measurable to a certain degree that give us a good view on the beneficial factor of a generated narrative.
-
-\subsection{Requirements and Constraints}
-Is this really necessary? 
-
-\section{Research methods}
-In the previous section I have declared my research questions being
-\begin{enumerate}
-	\item \textit{How can a \rogue game benefit from a procedurally generated narrative?}
-	\begin{enumerate}
-	\item \textit{What gameplay benefits can we introduce?} \label{rq:1a}
-	\item \textit{How does the development process benefit from a procedurally generated narrative?} \label{rq:2a}
-	\end{enumerate}
-\end{enumerate}
-This section will cover the methods used to measure the benefits that adding a procedurally generated narrative has.
-
-\subsection{RQ \ref{rq:1a}}
-\textit{What gameplay benefits can we introduce?}
-If there ever was a noun which definition was disputed, it's probably \textit{gameplay}. I'm not going to enter the discussion at this point, but just stick to the one I feel covers most facets: \textit{"The experience of gameplay is one of interacting with a game design in the performance of cognitive tasks, with a variety of emotions arising from or associated with different elements of motivation, task performance and completion."}(Lindley, et al. 2008). [something about the quote].
-I want the generated narrative to be part of a game, not just a additive thereon. With the close ties generated content has with emergent behaviour, I want to explore the changes that get introduced when adding a dynamic narrative to gameplay.
-
-\subsection{RQ \ref{rq:2a}}
-\textit{How does the development process benefit from a procedurally generated narrative?} This questions has some snags. What does it take to measure a process? Do we look at time spent writing a story and contrast that with the time spent building a story generator? What about the fact that we only have to build that generator once, whereas story crafting needs to be done for every single game.
-
-\section{Proof of concept}
-As a proof of concept I propose to build a game that incorporates the findings of this research. The game I will make will be a \rogue for their inherent use of PCG techniques. Due to the limited duration and scope of this project, the game will be restrained to the most basic elements of a \rogue. The only addition being a dynamically generated narrative. This game should pose as the proof of my research and be demonstrable to verify my answers to my research questions.
-
+\subsection{Diage}
+\begin{tabular}{|l|l|}
+	\hline
+	General Programming & C\#.Net \\
+	\hline
+	Graphing & Gliffy\\
+	\hline
+	Prototyping & Ludoscope\\
+	\hline
+\end{tabular}
+\subsection{Rouge}
+	\begin{tabular}{|l|l|}
+		\hline
+		Programming & C\#.Net\\
+		\hline
+		Game Engine & SilicaLib\\
+		\hline
+		Framework & XNA\\
+		\hline
+	\end{tabular}
+\\
+And this thesis has been created in LaTeX.
 \section{Rough planning estimate}
 This project lasts for 20 weeks, and the following will indicate my initial planning.
 

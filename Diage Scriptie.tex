@@ -1,16 +1,16 @@
 \documentclass[12pt,a4paper,onecolumn,titlepage]{book}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
 \usepackage{graphicx}
-\usepackage{ulem}
 \usepackage{natbib}
 \usepackage[margin=45pt]{geometry}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage[hidelinks]{hyperref}
 \usepackage{xspace}
+\usepackage{float}
+\usepackage[british]{babel}
+\usepackage[lined,boxed]{algorithm2e}
+\usepackage{subcaption}
+\usepackage{microtype}
 \author{Nico Andrew Glas}
 \title{Diage: A Dialogue Generator}
 \DeclareGraphicsExtensions{.png, .jpg}
@@ -22,6 +22,7 @@
 \newcommand{\citationneeded}{[\textit{citation needed}]}
 \newcommand{\rogue}{\textit{roguelike}\xspace}
 \newcommand{\his}{his/her\xspace}
+\newcommand{\he}{he/she\xspace}
 \makeatletter
 
 \makeatother
@@ -35,10 +36,11 @@
 \chapter*{Acknowledgements}
 \tableofcontents
 \include{chapters/Introduction}
-\chapter{The interactive story}
-\textit{Here I want to talk about the field of interactive storytelling and narrative building. Gives us a nice entrance to the rest of the document}
-\include{chapters/DML}
+\include{chapters/PCG}
+\include{chapters/IS}
 \include{chapters/NarrativePlanning}
+\include{chapters/DML}
+\include{chapters/diagerogue}
 \chapter{Usage in Ludoscope}
 \label{sec:ludoscope}
 \textit{This chapter will discuss the usage of Ludoscope for the procedural generation of plots and the diage knowledge model for a hypothetical quest generator.}
