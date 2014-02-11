@@ -1,8 +1,45 @@
 \chapter{Procedural Content Generation}
-In the world of game development we strive to create the best experiences for a wide and diverse audience. During the course of development there are a number of obstacles that can (and often will) hinder the progress of the developed game. Some of these hindrances come from processes that are essential to a game like; level- and world building, or story- and quest design. They take a proportionally large amount of development time and take a very specific mindset to create. A current development within the game development\footnote{twice development within the space of 3 words. NOT DONE} community to tackle these issues is the use of \textit{Procedural Content Generation} (PCG). This may be a confusing phrase for some, so let's dissect it.\footnote{Does this sound preachy?}
-\paragraph{Content Generation} When taken apart, this part of the phrase will probably become a lot clearer. It just really means what it says, we try to generate content, be that a quest for a Role-Playing game (like \game{World of Warcraft}) or a complete dungeon for a dungeon crawler (like \game{Rogue} or the \game{Diablo} series), content means anything within the context of a game. This generation can take place either on run-time (sometimes called \code{live} or \code{on-line} generation), making it possible for new generation for each time the game is run. Another possibility is to generate content prior to release. This has the benefit of being able to tweak the content to make it more satisfying or aesthetically pleasing, but removes the dynamic aspect that some games might strive for. Nobody will say that one of these methods is \emph{better} than the other, but they are both tools to be used on the right moment. \paragraph{Procedural} This part of the phrase is the one that often causes the most confusion, but just means that we use a specific procedure to generate our content. In the world of programming, it usually comes down to one or multiple algorithms that work together to generate \emph{predictable} content. A good example for a non-digital form of procedurally generated content is the card game \game{Klondike} (also called \game{Solitaire} or \game{Patience} in the US and the UK respectively). The procedure in this game is the shuffling of the deck. This "procedure" ensures a random order of the cards, and the resulting content is the layout of the game. While this might be a good example for content generation it is a poorly implemented one, for there exists multiple outcomes that the game can not be completed.
+In the world of game development we strive to create the best experiences for a wide and diverse audience.
+During the course of development there are a number of obstacles that can (and often will) hinder the progress of the developed game.
+Some of these hindrances come from processes that are essential to a game like; level- and world building, or story- and quest design.
+They take a proportionally large amount of development time and take a very specific mindset to create.
+A current development within the game development\footnote{twice development within the space of 3 words.
+NOT DONE} community to tackle these issues is the use of \textit{Procedural Content Generation} (PCG).
+This may be a confusing phrase for some, so let's dissect it.\footnote{Does this sound preachy?}
+\paragraph{Content Generation} When taken apart, this part of the phrase will probably become a lot clearer.
+It just really means what it says, we try to generate content, be that a quest for a Role-Playing game (like \game{World of Warcraft}) or a complete dungeon for a dungeon crawler (like \game{Rogue} or the \game{Diablo} series), content means anything within the context of a game.
+This generation can take place either on run-time (sometimes called \code{live} or \code{on-line} generation), making it possible for new generation for each time the game is run.
+Another possibility is to generate content prior to release.
+This has the benefit of being able to tweak the content to make it more satisfying or aesthetically pleasing, but removes the dynamic aspect that some games might strive for.
+Nobody will say that one of these methods is \emph{better} than the other, but they are both tools to be used on the right moment.
+\paragraph{Procedural} This part of the phrase is the one that often causes the most confusion, but just means that we use a specific procedure to generate our content.
+In the world of programming, it usually comes down to one or multiple algorithms that work together to generate \emph{predictable} content.
+A good example for a non-digital form of procedurally generated content is the card game \game{Klondike} (also called \game{Solitaire} or \game{Patience} in the US and the UK respectively).
+The procedure in this game is the shuffling of the deck.
+This "procedure" ensures a random order of the cards, and the resulting content is the layout of the game.
+While this might be a good example for content generation it is a poorly implemented one, for there exists multiple outcomes that the game can not be completed.
 \section{Narrative}
-I want to go as far as to say that narration defines what being humans means. We, as a society and as a species, have always used a storytelling context to receive and deliver information. Be that a story on the dangers of bears and lions to a more modern setting for the sake of leisure. But even then, for the sake of argument we need a proper definition of a narrative. Riedl and Young stated that a narrative is in it's simplest form a temporally ordered sequence of events \citep{Riedl:2004:IPM:1018409.1018753}. This is the definition I will keep to throughout this document. One other thing of particular note; a narrative does not explicitly mean the usage of text or spoken word. This is an easy, and clear way to convey a story, but never the only ways to do so. Granted; it can certainly add to the experience, but in my own opinion a game should, first and foremost, try to convey a story through it's mechanics. To discard that rule is to introduce the expensively named \textit{ludo-narrative dissonance}, or a discord between narrative and gameplay. There has been a vast discussion on the Internet about this phenomenon, on which I will not elaborate, but is worth of note to any aspiring game developer/designer. Games can be a powerful medium in which to explore the human condition, but for that we can really come to that point we need to start treating it with that same respect. And that's my preachy part.. which probably needs to be cut\footnote{Which makes me sad}.
+I want to go as far as to say that narration defines what being humans means.
+We, as a society and as a species, have always used a storytelling context to receive and deliver information.
+Be that a story on the dangers of bears and lions to a more modern setting for the sake of leisure.
+But even then, for the sake of argument we need a proper definition of a narrative.
+Riedl and Young stated that a narrative is in it's simplest form a temporally ordered sequence of events \citep{Riedl:2004:IPM:1018409.1018753}.
+This is the definition I will keep to throughout this document.
+One other thing of particular note; a narrative does not explicitly mean the usage of text or spoken word.
+This is an easy, and clear way to convey a story, but never the only ways to do so.
+Granted; it can certainly add to the experience, but in my own opinion a game should, first and foremost, try to convey a story through it's mechanics.
+To discard that rule is to introduce the expensively named \textit{ludo-narrative dissonance}, or a discord between narrative and gameplay.
+There has been a vast discussion on the Internet about this phenomenon, on which I will not elaborate, but is worth of note to any aspiring game developer/designer.
+Games can be a powerful medium in which to explore the human condition, but for that we can really come to that point we need to start treating it with that same respect.
+And that's my preachy part..
+which probably needs to be cut\footnote{Which makes me sad}.
 \section{Static and dynamic generation}
 \label{sec:static_dynamic_generation}
-Throughout this document I reference to static and dynamic generation, or static and dynamic narratives. These terms refer to the point in time where the generation takes place. When we speak of a static generation, this happens during the development. A developer may choose to generate a game world and continue to populate that world with the rest of his content. In a dynamic setting, said world is generated at runtime, usually when a new game is started. This means that every time the player starts a new game he gets a new world to explore. In a narrative context that means that a static narrative has been generated, but will never change. Whereas a dynamic narrative will always try to be different from the former.
+Throughout this document I reference to static and dynamic generation, or static and dynamic narratives.
+These terms refer to the point in time where the generation takes place.
+When we speak of a static generation, this happens during the development.
+A developer may choose to generate a game world and continue to populate that world with the rest of his content.
+In a dynamic setting, said world is generated at runtime, usually when a new game is started.
+This means that every time the player starts a new game he gets a new world to explore.
+In a narrative context that means that a static narrative has been generated, but will never change.
+Whereas a dynamic narrative will always try to be different from the former.
