@@ -1,9 +1,10 @@
-
 \chapter{Introduction}
+During my coursework for my Bachelors degree in Information Technology, I stumbled upon the field of procedural content generation (pcg). I dedicated last two years of school to understanding and applying this field, and it silently turned into one of my 'specialities'. It all started with a research project that focussed on generating game worlds with Voronoi diagrams. After that I made a couple of games that used content generation for various things; from using audio to generate platforms for an \textit{endless runner} type game, to cellular automata to create dungeons for a \textit{dungeon crawler}.
+The one thing I always had an interest in, is video game narrative. My thoughts turned towards the idea of using procedural content generation techniques to create a narrative for video games. Together with the Joris Dormans of the Create-IT research facility we set up a project to research the use of pcg in video game storytelling. This thesis is presented as part of my fulfilment for graduation and serves as a research report.
 
 \section{Create-IT}
 Create-IT applied research is one of the research institutes hosted by the University of Applied Sciences of Amsterdam. In this lab students, teachers and researchers all preform applied studies in the different sections of the IT world. Their goal is to educate future professionals in the uses of applied research, so these professionals can anticipate the ever changing field that is Information Technology.
-In the newly created Game Research Lab students and researchers alike contribute to the growing community of game developers; making the development of games easier or trying to understand current problems within the industry\footnote{How much can a few lines suck?}.
+In the newly created Game Research Lab students and researchers alike contribute to the growing community of game developers; making the development of games easier or trying to understand current problems within the industry.
 
 \section{Technology}
 This section covers the technologies used by me in developing and demonstrating the \diage system.
@@ -29,12 +30,41 @@ This section covers the technologies used by me in developing and demonstrating 
 		\hline
 	\end{tabular}
 \\
-And this thesis has been created in LaTeX.
-\section{Rough planning estimate}
-This project lasts for 20 weeks, and the following will indicate my initial planning.
+\section{Research Phases}
+This project lasts for 20 weeks, and the following will indicate the phases of my research process.
 
 \begin{itemize}
 	\item \textbf{Week 1-6} Literary study
 	\item \textbf{Week 7-13} Creating a generative algorithm
-	\item \textbf{Week 14-20} Proof of concept. 
+	\item \textbf{Week 14-20} Proof of concept.
+\end{itemize}
+
+\section{Problem definition}
+My main research question is \textit{How can a \rogue game benefit from a procedurally generated narrative?}. In this section I will state my research questions, and try to dissect them so all readers of this document have the same definitions, and the same context.
+	
+Let me clarify the term \rogue. The genre started with the video game \game{Rogue} that was released in 1980, and was characterised by having "random" dungeons where the player has to navigate rooms and fight monsters. The ultimate goal of the game was to get to the highest level possible without dying once. The game never really "ended". The game was over when the player died, but after that the player got to start all over again on level 1 with a complete newly generated dungeon. As the game gets progressively harder when the player starts go get to other levels, the chances for the player to lose get higher. Now, back to the term "\rogue"; A game with no definitive end and permanent loss of game progress when the player dies. The previous years has seen a rise in popular \rogue games, \gameby{FTL: Faster Than Light}{Subset Games} (2012) and \gameby{The Binding of Isaac}{Edmund McMillen and Floris Himsl} (2011) being just some examples.
+
+I specifically target \textit{roguelikes} for their inherent use of content generation. The need to have a different set of content throughout a play-session is the key selling point of a \rogue game. This makes it the right genre to experiment in with any new type of content generation.
+
+In my question I speak of benefits to the game by the use of a procedurally generated narrative. This results in a few sub-questions that tackle these benefits. \textit{What gameplay benefits can we introduce}, and \textit{How does the development process benefit from a procedurally generated narrative}. These questions are measurable to a certain degree that give us a good view on the beneficial factor of a generated narrative.
+
+\section{Research methods}
+This section will cover the methods used to measure the benefits that adding a procedurally generated narrative has.
+
+\subsection{What gameplay benefits can we introduce?}
+If there ever was a noun which definition was disputed, it's probably \textit{gameplay}. There is, however, one definition that I feel covers most facets: \textit{"The experience of gameplay is one of interacting with a game design in the performance of cognitive tasks, with a variety of emotions arising from or associated with different elements of motivation, task performance and completion."}(Lindley, et al. 2008). [something about the quote].
+I want the generated narrative to be part of a game, not just an additive thereon. With the close ties generated content has with emergent behaviour, I want to explore the changes that get introduced when adding a dynamic narrative to gameplay.
+
+\subsection{How does the development process benefit from a procedurally generated narrative?}
+This questions has some caveats. What does it take to measure a process? Do we look at time spent writing a story and contrast that with the time spent building a story generator? What about the fact that we only have to build that generator once, whereas story crafting needs to be done for every single game. These questions all get tackled in a later chapter, when I discuss the proof of concept that has arisen from this project.
+
+\section{Proof of concept}
+As a proof of concept I propose to build a game that incorporates the findings of this research. The game I will make will be a \rogue for their inherent use of PCG techniques. Due to the limited duration and scope of this project, the game will be restrained to the most basic elements of a \rogue. The only addition being a dynamically generated narrative. This game should pose as the proof of my research and be demonstrable to verify my answers to my research questions.
+
+\section{Requirements and Constraints}
+The project has several requirements and constraints, which are:
+\begin{itemize}
+\item \textit{Only} \rogue:		All research done into generating content is targeted at \rogue games. This is done because said genre are small and already rely on procedural content.
+\item \textit{Windows only}: 	I will develop only on \textit{Microsoft Windows} for the duration of this project, thus limiting the resulting products to be available only on Windows.
+\item \textit{Working demo}: 	The project must result in a working demo that shows the potential of a procedurally generated narrative.
 \end{itemize}
