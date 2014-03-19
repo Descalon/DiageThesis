@@ -1,7 +1,7 @@
 \documentclass[12pt,a4paper,onecolumn,titlepage]{book}
 \usepackage{graphicx}
 \usepackage{natbib}
-\usepackage[margin=45pt]{geometry}
+\usepackage[margin=90pt]{geometry}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage[hidelinks]{hyperref}
@@ -16,11 +16,11 @@
 \DeclareGraphicsExtensions{.png, .jpg}
 \graphicspath{ {./img/} }
 \newcommand{\code}[1]{\texttt{#1}}
-\newcommand{\diage}{\textsl{Diage}\xspace}
+\newcommand{\diage}{Rouge\xspace}
 \newcommand{\game}[1]{\textbf{#1}}
 \newcommand{\gameby}[2]{\game{#1} by {\textit{#2}}}
 \newcommand{\citationneeded}{[\textit{citation needed}]}
-\newcommand{\rogue}{\textit{roguelike}\xspace}
+\newcommand{\rogue}{roguelike\xspace}
 \newcommand{\his}{his/her\xspace}
 \newcommand{\he}{he/she\xspace}
 \makeatletter
@@ -31,16 +31,31 @@
 \begin{document}
 \maketitle
 \chapter*{Abstract}
-\textit{will come later}\cite{Cavazza:2002:CIS:630325.630747} \cite{Greimas:Boydstun:90} \cite{Magerko:2004:ACD:1597321.1597339} \cite{Porteous:2009:CNG:1695522.1695557} \cite{Weyhrauch:1997:GID:925491} \cite{Riedl03character-focusednarrative} \cite{Riedl:2003:MIU:860575.860694} \cite{Riedl:2004:IPM:1018409.1018753} \cite{Sgouros199929}
+Game development is resource heavy and time consuming.
+By using \textit{procedural content generation}(PCG), game developers can save time perfecting and polishing the more critical parts of a game.
+A recent trend within game development is to use PCG to create worlds, levels, and quests. And as such we miss a more esoteric application for the techniques such as creating music or, indeed, generating narratives.
+
+This document chronicles the development of a roguelike game and explores the potential of a procedurally generated narrative from a development perspective.
+I lay out the details of the narrative planner used to control the narrative and examine a modelling language that can be used in prototyping narrative scenarios.
 
 \chapter*{Acknowledgements}
+I would first and foremost like to thank Joris Dormans for granting me this position within the research facility to let me work out any crazy idea I had in my head (and adding a few of his own, mind). 
+Your work in the gaming field is an inspiration to us all.
+Thanks, to Stefan Leijnen, for your excellent guidance and providing me with the needed mental support.
+Without you and Joris, I shudder to think how this project would have gone.
+
+My thanks, and most sincere apologies for all those late nights, to Anne-Marieke Zaal, for being the reason I stopped work and went home.
+
+Additional thanks go to Gerjo Meier, for correcting all those stupid grammar errors and for all those silly discussion we have.
+
+And of course, thank you, the reader, for taking your time and reading this document.
+
 \tableofcontents
 \include{chapters/Introduction}
-\include{chapters/PCG}
 \include{chapters/IS}
+\include{chapters/PCG}
 \include{chapters/NarrativePlanning}
 \include{chapters/DML}
-\include{chapters/diagerogue}
 \include{chapters/Conclusion}
 \include{chapters/reflection}
 \bibliographystyle{plain}

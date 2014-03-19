@@ -1,15 +1,17 @@
-\chapter{Conclusion}
-In this chapter I conclude my research and give some ideas for future study.\\
+\chapter*{Conclusion}
+When I started my research I asked the questions \textit{How does the development process of a \rogue game benefit from using a generative narrative?}.
 
-When I started my research, I asked if \rogue games can benefit from a procedurally generated narrative. I ask these questions from a designers point of view; \textit{"Does the game get better/more interesting?"}, and from a developers perspective: \textit{"Can we develop games faster/more efficiently"}. In the main text I gave multiple answers to these questions and concluded that they both have merit.
+Procedural content is a large part of the \rogue experience. 
+Without novel levels and a new way to traverse the world on every play through, the concept of turn-based dungeon crawling with perma-death loses its appeal.
 
-I hold that procedural narrative has value within video games. In 20 weeks I've built a system that enables a developer to create games that generate an emergent narrative as a result of simple values given to simple representations. While true that my research focuses on one type of game, the field is open for further work into other genres. \diage itself can help developers build \rogue games within a smaller time-frame, due to the fact that \diage handles most of the story-writing. 
+In general terms; I hold that procedural narrative has value within video game development as a whole.
+In 20 weeks I've built a system that enables a developer to create games that generate an emergent narrative as a result of simple values given to simple representations.
+In chapter~\ref{ch:planning} I reasoned that for my scope and time going forward with a narrative planner was the way to go, in contrast to a BDI system.
+A narrative planner gives me much more control over the narrative system, whereas a BDI model would not. 
+My conclusion is, however, that any further development of the narrative system should contain a form of the BDI model, with the Narrator as overall director of the actors. 
+While true that my research focuses on one type of game, the field is open for further work into other genres.
+The Narrator itself can help developers create \rogue games within a smaller time-frame, due to the fact that the Narrator handles most of the story-writing.
+Using the Narrator a designer could design a game around the ambiguity of the context, with the inherent fact that every play through can give a player a sense of an actual new adventure.
+Even without the use of the Narrator, the attribute system allows designers to quickly design and test any game that has a implicit use of numbers, such as RPGs, Dungeon Crawlers and Tactics games.
 
-Using \diage a designer could design a game around the ambiguity of the context, with the inherent fact that every play through can give a player a sense of an actual new adventure. Even without the use of \diage as a narrator, the attribute system allows designers to quickly design and test any game that has a implicit use of numbers, such as RPGs, Dungeon Crawlers and Tactics games. 
-
-\section{Further Study}
-As mentioned before, \diage was limited to \rogue games for the sake of scope. Other video game genres might be able to benefit from the use of a narrative system; especially games that are usually narrative-heavy.
-
-\diage is normally expressed with a DML diagram, but the underlying structure is that of a graph. Little work has gone in to using this graph as a means to structure the direction of a narrative. More research in respect to graph translations in relation to \diage could result in a better way to direct the narrative into a specific direction. As example; the designer could define an initial state, and an eventual state. Using graph translations \diage could interpolate several \textit{in-between} states that the narrative will take. A method could be developed in which \diage could output all variants of narrative trees respectively to the choices available to the player. Displaying all possible endings a discreet story arc could have. 
-
-It has been pointed out to me that the \diage system could be implemented in such a way that it could be used by the \textit{Mechanations} system developed by Dr. Joris Dormans\footnote{A bit too butt-kissy?} \ldots
+As a summary; the development process gets the added benefit of a quick way to prototype stories in the form of the DML diagrams, a fast and efficient way of adding and perfecting game mechanics by the use of the narrative attribute system, and gains the ability to generate unique and novel narratives that is highly controllable, but requires relatively little input.
