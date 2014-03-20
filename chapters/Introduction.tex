@@ -1,28 +1,15 @@
 \chapter{Introduction}
-During my coursework for my Bachelors degree in Information Technology, I stumbled upon the field of procedural content generation (PCG). I dedicated last two years of school to understanding and applying this field, and it silently turned into one of my 'specialities'. It all started with a research project that focussed on generating game worlds with Voronoi diagrams. After that I made a couple of games that used content generation for various things; from using audio to generate platforms for an \textit{endless runner} type game, to cellular automata to create dungeons for a \textit{dungeon crawler}.
+During my coursework for my Bachelors degree in Information Technology, I stumbled upon the field of procedural content generation (PCG). I dedicated the last two years of school to understanding and applying this field, and it silently turned into one of my 'specialities'. It all started with a research project that focussed on generating game worlds with Voronoi diagrams. After that I made a couple of games that used content generation for various things; from using audio to generate platforms for an \textit{endless runner} type game, to cellular automata to create dungeons for a \textit{dungeon crawler}.
 The one thing I always had an interest in, is video game narrative. My thoughts turned towards the idea of using procedural content generation techniques to create a narrative for video games. Together with Joris Dormans of the Create-IT research facility we set up a project to research the use of PCG in video game storytelling. This thesis is presented as part of my fulfilment for graduation and serves as a research report.
 
 \section{Create-IT}
 Create-IT applied research is one of the research institutes hosted by the University of Applied Sciences of Amsterdam. In this lab students, teachers and researchers all perform applied studies in the different sections of the IT world. Their goal is to educate future professionals in the uses of applied research, so these professionals can anticipate the ever changing field that is Information Technology.
 In the newly created Game Research Lab students and researchers alike contribute to the growing community of game developers; making the development of games easier or trying to understand current problems within the industry.
 
-\section{Technology}
-Rouge is built in C\#.Net on the XNA framework, because of my familiarity within these techniques. I believe that my expertise within these areas made it easier and faster to develop the product in this setting than in any other.
-All the graphing and prototyping work work as explained in chapter~\ref{ch:dml} is done with the graphing software Gliffy.
-The DML Creator is created with C\#.Net and the Windows Presentation Foundation subsystem.
-\section{Research Phases}
-This project lasts for 20 weeks, and the following will indicate the phases of my research process.
-
-\begin{itemize}
-	\item \textbf{Week 1-6} Literature study
-	\item \textbf{Week 7-13} Creating a generative algorithm
-	\item \textbf{Week 14-20} Proof of concept.
-\end{itemize}
-
 \section{Problem definition}
-My main research question is \textit{How does the development process of a \rogue game benefit from using a generative narrative?}. In this section I will state my research questions, and try to dissect them so all readers of this document have the same definitions and context.
-	
-Let me clarify the term \rogue. The genre started with the video game \game{Rogue} that was released in 1980, and was characterised by having "random" dungeons where the player has to navigate rooms and fight monsters. The ultimate goal of the game was to get to the highest level possible without dying once. The game never really "ended". The game was over when the player died, but after that the player got to start all over again on level 1 with a complete newly generated dungeon. As the game gets progressively harder when the player starts go get to other levels, the chances for the player to lose get higher. Now, back to the term "\rogue"; A game with no definitive end and permanent loss of game progress when the player dies. The previous years has seen a rise in popular \rogue games, \gameby{FTL: Faster Than Light}{Subset Games} (2012) and \gameby{The Binding of Isaac}{Edmund McMillen and Floris Himsl} (2011) being just some examples.
+My main research question is \textit{How does the development process of a \rogue game benefit from using a generative narrative?}. 
+
+Let me clarify the term \rogue. The genre started with the video game \game{Rogue} that was released in 1980, and was characterised by having "random" dungeons where the player has to navigate rooms and fight monsters. The ultimate goal of the game was to get to the highest level possible without dying once. The game never really "ended". The game was over when the player died, but after that the player got to start all over again on level 1 with a complete newly generated dungeon. As the game gets progressively harder when the player starts to get to other levels, the odds of the player to losing get significantly higher. Now, back to the term "\rogue"; A game with no definitive end and permanent loss of game progress when the player dies (the latter part is also called \textit{perma-death}). The previous years has seen a rise in popular \rogue games, \gameby{FTL: Faster Than Light}{Subset Games} (2012) and \gameby{The Binding of Isaac}{Edmund McMillen and Floris Himsl} (2011) being just some examples.
 
 I specifically target \textit{roguelikes} for their inherent use of content generation. The need to have a different set of content throughout a play-session is the key selling point of a \rogue game. This makes it the right genre to experiment in with any new type of content generation.
 \section{Proof of concept}
@@ -38,4 +25,24 @@ The project has several requirements and constraints, which are:
 \item \textit{Only} \rogue:		All research done into generating content is targeted at \rogue games. This is done because said genre is small and already relies on procedural content.
 \item \textit{Windows only}: 	I will develop only on \textit{Microsoft Windows} for the duration of this project, thus limiting the resulting products to be available only on Windows.
 \item \textit{Working demo}: 	The project must result in a working demo that shows the potential of a procedurally generated narrative.
+\end{itemize}
+
+\section{Technology}
+All software discussed in this document is built in C\#.Net because of my familiarity within these technique. 
+I believe that my expertise within these areas made it easier and faster to develop the product in this setting than in any other.
+The other considered possibility was coding in C++.
+I opted against that, because of the added layer of complexity it would add towards the software.
+My intuition was that C++ would have needed a lot of boilerplate code, which C\#.Net wouldn't have needed, prolonging the development time significantly. 
+All the graphing and prototyping work work as explained in chapter~\ref{ch:dml} is done with the graphing software Gliffy.
+\section{Research Phases}
+This project lasts for 20 weeks, and the following will indicate the phases of my research process.
+
+\begin{itemize}
+	\item \textbf{Week 1-6} Literature study
+	\item \textbf{Week 7} Developing DML
+	\item \textbf{Week 9-8} Creating the cellular automaton
+	\item \textbf{Week 8-10} The Narrator
+	\item \textbf{Week 10-14} Constructing Rouge
+	\item \textbf{Week 14-16} Testing
+	\item \textbf{Week 16 - 20} Writing
 \end{itemize}

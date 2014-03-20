@@ -44,14 +44,6 @@ Looking at the \textit{Dungeons and Dragons} alignment table in figure~\ref{fig:
 
 By exposing different attributes to the narrator the developer can direct the narrative towards their wishes.
 Besides specifying the actions and behaviours, the attributes can define actions that the narrator can use when planning a new story step. By looking at all exposed attributes within the given setting the narrator can assign actors to help or obstruct the player in his current mission.
-\begin{figure}[p]
- \includegraphics[scale=.7]{attributeUML}
- \caption{Class description of the DiageAttribute}\label{fig:attributeUML}
-\end{figure}
-\begin{figure}[p]
-	\includegraphics[scale=.8]{alignment}
-	\caption{\textit{Dungeons \& Dragons} alignment sheet}\label{fig:dnd}
-\end{figure}
 
 %\section{The Narrator}
 %\textit{The Narrator} is the both the narrative planning system and overall controller for \diage. This section will give a brief run-down on the components that make up the Narrator.
@@ -151,7 +143,7 @@ That could be within 2 minutes, but it could be several weeks.
 \diage takes this into account by keep adding segments onto a story, sometimes using information gained from previous plots and at other times creating entire new spaces and NPCs therein.
 So the operators that Porteous uses we use within these small story steps instead of the entire narrative.
 
-\begin{figure}
+\begin{figure}[!h]
 \begin{tabular}{|l||l|}
 \hline 
 operator & meaning \\ 
@@ -202,3 +194,12 @@ The downside is that, as the Narrator acts as every NPC, the other actors in the
 In the same vain, the NPCs never act with, or react to, each other.
 Everything is focused upon the story of the protagonist, but the world feels empty without him.
 The latter part could be resolved by using a more sophisticated AI system, such as a BDI model for NPCs, and letting the actors react to each other, coordinated by the Narrator, to give a more natural feel to the story and the world.
+
+\begin{figure}[p]
+ \includegraphics[scale=.7]{attributeUML}
+ \caption{Class description of the DiageAttribute}\label{fig:attributeUML}
+\end{figure}
+\begin{figure}[p]
+	\includegraphics[scale=.8]{alignment}
+	\caption{\textit{Dungeons \& Dragons} alignment sheet}\label{fig:dnd}
+\end{figure}

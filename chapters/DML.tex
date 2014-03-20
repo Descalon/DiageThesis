@@ -20,7 +20,7 @@ The latter is also an information container which I will discuss in section~\ref
 The following section will only cover the entities that affect the story directly; the objects and actors.
 In conjunction with \code{actions} and \code{accessors} these entities convey story information and plot progression.
 
-\begin{figure}[h]
+\begin{figure}[p]
 	\includegraphics[scale=.5]{symbols}
 	\caption{DML Symbols}
 	\label{fig:DMLSymbols}	
@@ -79,7 +79,7 @@ If we review the diagram in figure~\ref{fig:examplediagram} we see that the Mayo
 This would imply that the Mayor has no knowledge about what's or who's in the store.
 If we compare figure~\ref{fig:examplediagram} to figure~\ref{fig:example:accessors}, we see that the Mayor now has a connection to the Shop, thus we can be sure that the Mayor has the knowledge it would have, if it had been in the shop space itself.
 
-\begin{figure}[ht]
+\begin{figure}[p]
 	\centering
 	\begin{subfigure}[b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{npc_action}
@@ -120,7 +120,7 @@ This information gets transferred the same way that an actor could learn new inf
 
 As a snapshot of the given scene, DML loses the information of the scenario's before and after it. To gain a sense of story progression, one needs to look at several diagrams in quick succession to see what is really happening. Observe figures \ref{fig:narrative} and \ref{fig:narrative2}. These two diagrams display how a story segment (or quest in this instance) is modelled in DML. The examples in question are of the \textit{Save the Princess} and \textit{Fetch} quest variety. 
 
-\begin{figure}[h]
+\begin{figure}[p]
 	\centering
 	\begin{subfigure}[b]{0.4\textwidth}
 		\includegraphics[width=\textwidth]{narrative/1}
@@ -153,7 +153,7 @@ The five diagrams in figure~\ref{fig:narrative} shows us a \textit{Save the Prin
 The point is, that we need the knowledge of previous story states, before we can assume that we know what is happening. 
 DML has not been designed as a language that tells a story, but purely a way to display the state of one at a certain point of time.
 
-\begin{figure}[h]
+\begin{figure}[p]
 	\centering
 	\begin{subfigure}[b]{0.4\textwidth}
 		\includegraphics[width=\textwidth]{narrative/2-1}
@@ -222,7 +222,7 @@ As example; the designer could define an initial state, and an eventual state.
 Using graph translations \diage could interpolate several \textit{in-between} states that the narrative will take as seen in figure~\ref{fig:graph}.
 A method could be developed in which \diage could output all variants of narrative trees respectively to the choices available to the player, displaying all possible endings a discreet story arc could have.
 
-\begin{figure}
+\begin{figure}[p]
 \centering
 	\begin{subfigure}{0.4\textwidth}
 		\includegraphics[width=\textwidth]{graph/ex-1}

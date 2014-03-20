@@ -3,9 +3,9 @@
 Most of the research done on narrative generation is contained within the field of Interactive Storytelling (IS). The average observer may not see the difference between a game with a story and a interactive story, and can be forgiven for this is still in open debate within their respective fields. However open the discussion may be there are, albeit subtle, differences. This chapter covers the work done in this field that relates to my own research, and discusses the contrast between the conception of interactive storytelling and video games.
 
 \section{Video Games and Interactive Stories}
-The notion that an interactive story is a distinctly different product than video games has been in open discussion ever since video games started having complex stories themselves. In the early years of video gaming (games like \game{Pong}, \game{Pac-Man} and \game{Tetris}) games usually didn't have a story\footnote{That didn't stop people super imposing stories. See: \url{http://www.smbc-comics.com/?id=2736}}, but then games like \gameby{The Legend of Zelda}{Nintendo R\&D4} became popular that did have a, albeit small, story. At this point in time the distinction between, and especially the semantics, became open for debate.
+The notion that an interactive story is a distinctly different product than video games has been in open discussion ever since video games started having complex stories themselves. In the early years of video gaming (games like \game{Pong}, \game{Pac-Man} and \game{Tetris}) games usually didn't have a story\footnote{That didn't stop people super imposing stories. See: \url{www.smbc-comics.com/?id=2736}}, but then games like \gameby{The Legend of Zelda}{Nintendo R\&D4} became popular that did have a, albeit small, story. At this point in time the distinction between, and especially the semantics, became open for debate.
 
-In this day and age contemporary games often don't get shipped without an attempt at a story, with the exception being \textit{social} games like \gameby{Candy Crush}{King} and \gameby{Bejeweled}{PopCap Games}, the lines between an interactive narrative and video games become blurry. As matter of fact; the term \textit{video games} has recently been under fire. The questions; what makes something a game? What defines a game? The web show \textit{Extra Credits}\footnote{See \url{http://extra-credits.net}} has a nice answer to this: 
+In this day and age contemporary games often don't get shipped without an attempt at a story, with the exception being \textit{social} games like \gameby{Candy Crush}{King} and \gameby{Bejeweled}{PopCap Games}, the lines between an interactive narrative and video games become blurry. As matter of fact; the term \textit{video games} has recently been under fire. The questions; what makes something a game? What defines a game? The web show \textit{Extra Credits}\footnote{See \url{http://extra-credits.net} episode of 11/27/2013} has a nice answer to this: 
 \begin{quote}
 [...] We're asked this question all the time, but, you know; I think it's the wrong question. It's a distraction. It does nothing but limits us. It's as if we started to ask: "Well is this really poetry?" when poets moved away from rigid meter or rhyming couplets. [...]
 \end{quote}
@@ -17,12 +17,6 @@ The early attempts to understand interactive storytelling came in the form of \g
 
 \section{Dynamic plot generation}
 One of the most cited works when dealing with generating plots for interactive systems is Sgouros' 1999 paper \textit{Dynamic generation, management and resolution of interactive plots}\cite{Sgouros199929}. The system proposed in this document dynamically moves the plot forward with the relations and interactions between actors serving as input. Figure~\ref{fig:sgouros_flowchart} shows us the flow of Sgouros' \textit{Plot Manager}; the central piece of his interactive story system. Sgouros shows us how we can abstract concepts like relations and events both causal and temporal and defines a syntax used to describe actions actors can make and goals they might have. His system generates so-called Aristotelian plots, where a conflict between antagonistic forces develops out of the initial situation. The plot will move through a sequence of conflicts and always terminates in a unambiguous solution. 
-
-\begin{figure}
-	\includegraphics[scale=.6]{sgourosflowchart}
-	\caption{Flowchart of Sgouros' \textit{Plot Manager}}
-	\label{fig:sgouros_flowchart}
-\end{figure}
 
 \section{Character-based storytelling}
 At the turn of the century we saw a shift from general story generation towards a more character driven approach.
@@ -51,7 +45,11 @@ In most examples the player is merely an actor with a more volatile behaviour, i
 I strive for a system that really revolves around the player.
 The story made by the actions that the player did or did not do.
 
-
+\begin{figure}[p]
+	\includegraphics[scale=.6]{sgourosflowchart}
+	\caption{Flowchart of Sgouros' \textit{Plot Manager}}
+	\label{fig:sgouros_flowchart}
+\end{figure}
 
 
 

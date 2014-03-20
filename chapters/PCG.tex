@@ -12,7 +12,7 @@ In this way the game can take a different form at any given time, making the gam
 Another possibility is to generate content during the development cycle.
 This is mainly used to save development time, adding the benefit of creating an abundance of content that can be tweaked to create a more author-centric feel to the game.
 The term \textit{Procedural} refers to the algorithms, and indeed procedures, used to generate the content.
-These procedures should result in predictable content and range from using cellular automata for generating dungeons, as is the case with Rouge, or using a Voronoi/Delaunay dual-graph to generate realistic worlds\footnote{A reference to myself would be fucking pretentious, wouldn't it?}.
+These procedures should result in predictable content and range from using cellular automata for generating dungeons, as is the case with Rouge, or using a Voronoi/Delaunay dual-graph to generate realistic worlds.
 A good example is is the card game \game{Klondike}, alternatively called \game{Solitare}/\game{Patience}.
 In this simple card game, shuffling the deck is the procedure used to randomly reorder the cards with the resulting 'content' being the layout of the game.
 
@@ -59,15 +59,15 @@ An example would be a hunter that is severely impressed with your archery skill,
 But figure~\ref{fig:convo} shows us an NPC that is annoyed at the player for bringing an equipped weapon in to his house, and he would refuse giving the player information or items while in this state.
 
 
-\begin{figure}[h]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{gameplay/Quest}
 	\caption{The narrator telling the player what to do.}\label{fig:quest}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{gameplay/convo}
 	\caption{A NPC that is angry at the player for carrying a weapon in his home}\label{fig:convo}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{gameplay/attack}
 	\caption{The player and a monster attacking each other}\label{fig:attack}
 \end{figure}
@@ -96,7 +96,7 @@ Celullar automata work by defining a regular grid of cells, each in any number o
 With these definitions set the grid could be populated with a random amount of cells in live state, assuming that the dead state is the default. Each step of the automaton will cycle through the rules, checking to see if the conditions of a rule is set. After all the cells have been checked the rules execute and changes the grid. With these three simple rules, we can generate moving shapes and repeating patterns. The rules come from one of the most recognized cellular automata; \game{Conway's Game of Life}. Figure~\ref{fig:game_of_life} shows an example of the emergent behaviour that these simple rules generate.
 
 
-\begin{algorithm}[h]
+\begin{algorithm}[p]
 	\KwIn{tilemap}
 	\KwOut{new tilemap}
 	let \textit{deadCells} and \textit{liveCells} be an empty collection of tiles\;
@@ -117,13 +117,13 @@ With these definitions set the grid could be populated with a random amount of c
 \end{algorithm}
 
 
-During a step of this automaton, the algorithm walks through the game world and checks each tile for certain conditions pertaining to their neighbours. If these conditions are met, his state will be changed accordingly. The states a tile has in Rouge are a simple \textit{Wall} or \textit{Normal} state. When a tile has 5 or more wall neighbours, the tile becomes a wall themselves. However, when a tile has less than 2 wall neighbours, the tile becomes a normal. The first rule ensures that tiles group together, and the other rule destroys any singular 'island' walls.
+During a step of this automaton, the algorithm walks through the game world and checks each tile for certain conditions pertaining to their neighbours. If these conditions are met, his state will be changed accordingly. The states a tile has in Rouge are a simple \textit{Wall} or \textit{Normal} state. When a tile has 5 or more wall neighbours, that tile itself becomes a wall. However, when a tile has less than 2 wall neighbours, the tile becomes a normal. The first rule ensures that tiles group together, and the other rule destroys any singular 'island' walls.
 
-As we will discuss in chapter~\ref{ch:dml} A game made with the \diage system contains several entities.
+As we will discuss in chapter~\ref{ch:dml} a game made with the \diage system contains several entities.
 One of those entities is a \textit{Space}.
 Spaces represent any or all spaces currently within a game-world, ranging from a single room to a entire city or even the world. Spaces in Rouge are designated areas where the player can find shops and resolve \his objectives. These 'rooms' are generated using a simple tile-based flood-fill algorithm that circles around a selected tile. The algorithm has a maximum allowance that gets depleted by a tile's cost. This cost is higher for tiles that have fewer live neighbours than those that are encircled by them. This creates the effect that corridors are more expensive to fill (thus have a lower grouping rate) and large open spaces are easy to fill all the way through.
 
-\begin{figure}[H]
+\begin{figure}[p]
 	\includegraphics[width=\textwidth]{gameplay/spaces}
 	\caption{Space entities depicted by the areas with coloured tiles}\label{img:gameplay:spaces}
 \end{figure}

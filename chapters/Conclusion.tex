@@ -1,10 +1,16 @@
-\chapter*{Conclusion}
-When I started my research I asked the questions \textit{How does the development process of a \rogue game benefit from using a generative narrative?}.
-
+\chapter{Conclusion}
 Procedural content is a large part of the \rogue experience. 
-Without novel levels and a new way to traverse the world on every play through, the concept of turn-based dungeon crawling with perma-death loses its appeal.
+In this research, the procedural content is mainly focussed on generating a story, but features world generation as well.
+That generation is used to create new scenarios on a fast pace, and requires less time to craft the levels by hand.
+Additionally, for the specific case of roguelikes, without novel levels and a new way to traverse the world on every play through, the concept of turn-based dungeon crawling with perma-death quickly loses its appeal.
 
-In general terms; I hold that procedural narrative has value within video game development as a whole.
+My goal with procedural narrative planning was to create a rougelike game that creates a controlled narrative in the vain of the rougelike experience: different on every play-through.
+I achieved this result by using a narrative planner that combines relationships that in game actors have with other entities - either other actors or objects - and the attributes the actors have to steer the player in a new direction.
+
+To help me create this narrative planner I developed my own modelling language DML (Diage Modelling Language), that served as a visualisation for storytelling.
+It uses the entities \textit{spaces}, \textit{actors}, and \textit{objects} to display story states and possible actions that can be taking by the actors to progress onto the next story state. 
+
+I hold that procedural narrative has value within video game development as a whole.
 In 20 weeks I've built a system that enables a developer to create games that generate an emergent narrative as a result of simple values given to simple representations.
 In chapter~\ref{ch:planning} I reasoned that for my scope and time going forward with a narrative planner was the way to go, in contrast to a BDI system.
 A narrative planner gives me much more control over the narrative system, whereas a BDI model would not. 
@@ -12,6 +18,6 @@ My conclusion is, however, that any further development of the narrative system 
 While true that my research focuses on one type of game, the field is open for further work into other genres.
 The Narrator itself can help developers create \rogue games within a smaller time-frame, due to the fact that the Narrator handles most of the story-writing.
 Using the Narrator a designer could design a game around the ambiguity of the context, with the inherent fact that every play through can give a player a sense of an actual new adventure.
-Even without the use of the Narrator, the attribute system allows designers to quickly design and test any game that has a implicit use of numbers, such as RPGs, Dungeon Crawlers and Tactics games.
+Even without the use of the Narrator, the attribute system allows designers to design and test any game that has a implicit use of numbers, such as RPGs, Dungeon Crawlers and Tactics games.
 
 As a summary; the development process gets the added benefit of a quick way to prototype stories in the form of the DML diagrams, a fast and efficient way of adding and perfecting game mechanics by the use of the narrative attribute system, and gains the ability to generate unique and novel narratives that is highly controllable, but requires relatively little input.
